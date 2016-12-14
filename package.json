@@ -8,6 +8,9 @@
   },
   "author": "Jamie Chapman <jamie.chapman@57digital.co.uk> (http://www.57digital.co.uk)",
   "license": "ISC",
+  "keywords": [
+    "onesignal","one","signal","api","wrapper","node","push","notification","apns", "gcm", "android","ios","one-signal"
+  ],
   "dependencies": {
     "request": "^2.79.0",
     "underscore": "^1.8.3"
