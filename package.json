@@ -8,6 +8,10 @@
   },
   "author": "Jamie Chapman <jamie.chapman@57digital.co.uk> (http://www.57digital.co.uk)",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamiechapman/simple-onesignal.git"
+  },
   "keywords": [
     "onesignal",
     "one",
@@ -21,7 +25,8 @@
     "gcm",
     "android",
     "ios",
-    "one-signal"
+    "one-signal",
+    "simple-onesignal"
   ],
   "dependencies": {
     "request": "^2.79.0",
