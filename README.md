@@ -1,6 +1,6 @@
 # simple-onesignal
 
-> A simple wrapper for onesignal.  Used to send Push Notifications to end-users.
+> A simple Node.js wrapper for onesignal.  Used to send Push Notifications to end-users.
 
 Sign up for free at: [onesignal.com](http://www.onesignal.com)
 
