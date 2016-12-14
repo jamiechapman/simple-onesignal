@@ -50,7 +50,7 @@ onesignal.sendMessage({
 
 ### Convenience methods
 
-The following methods essentially so the same as `sendMessage([data])`, but wrap some of the boiler plate up for you.
+The following methods essentially do the same as `sendMessage([data])`, but wrap some of the boiler plate up for you.
 
 #### Send text to segments
 
