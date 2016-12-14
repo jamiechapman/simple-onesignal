@@ -6,7 +6,9 @@ Sign up for free at: [onesignal.com](http://www.onesignal.com)
 
 ## Install
 
-todo
+```
+npm install simple-onesignal
+```
 
 ## Setup
 
