@@ -21,6 +21,8 @@ onesignal.configure('[APP ID]', '[REST API KEY]');
 
 ### Sending a message
 
+The `sendMessage` method accepts either a string, or an Object.  If you decide to send an object, ensure it is in the correct format as described below.
+
 #### Simple Text to everyone
 
 The following code will send a message in English to *all* subscribers!
