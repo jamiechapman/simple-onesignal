@@ -15,9 +15,10 @@ SOS._serverEndpoint = 'https://onesignal.com/api/v1';
 /***
  * This method sets up the module with the required API keys to use OneSignal
  */
-SOS.prototype.configure = function(appId, restKey) {
+SOS.prototype.configure = function(appId, restKey, debug) {
     SOS._appId = appId;
     SOS._restKey = restKey;
+    SOS._debug = debug;
 };
 
 /**
@@ -90,8 +91,8 @@ SOS.prototype._execHttpRequest = function(url, method, data, cb) {
 
     // Inject App ID into payload
     data.app_id = SOS._appId;
-
-    console.log(data);
+    
+    if (SOS._debug) console.log(data);
 
     request.post({
         url: url,
