@@ -107,12 +107,23 @@ SOS.prototype._execHttpRequest = function(url, method, data, cb) {
             cb(null, responseBody);
         } else {
             if(typeof responseBody !== 'undefined') {
-                var errorResponse = JSON.parse(responseBody);
-                if(typeof errorResponse.errors !== 'undefined') {
-                    cb(util.format("OneSignal came back with errors: %s", errorResponse.errors.join(', ')));
-                } else {
-                    cb('Could not connect to OneSignal, HTTP error: ' + response.statusCode);
+                //Define an empty variable for errorResponse.
+                var errorResponse = null;
+                
+                //We are expecting JSON from OneSignal. To be safe, let's wrap
+                try{
+                    errorResponse = JSON.parse(responseBody);
+                } catch(error){
+                    return cb('OneSignal returned invalid JSON: ' + responseBody);
                 }
+           
+                //Return the one or more errors OneSignal gave us.
+                if(errorResponse && typeof errorResponse.errors !== 'undefined') {
+                    return cb(util.format("OneSignal came back with errors: %s", errorResponse.errors.join(', ')));
+                }
+                
+                cb('Could not connect to OneSignal, HTTP error: ' + response.statusCode);
+                
             } else {
                 cb('Error connecting to OneSignal! HTTP response code ' + response.statusCode);
             }
