@@ -73,12 +73,16 @@ In the example below, we are targeting users who have not opened the app for at 
 var filters = [
     {field:'last_session', relation:'>', hours_ago:'12'}
 ]
+var heading = "Test Heading"
+var message = "Test Message"
+var testData = {
+    "object_id": "random_id123"
+}
 
-onesignal.sendMessageTextWithFilters('Hello world', filters, function(err, resp) {
+onesignal.sendMessageTextWithFilters(heading, message, testData, filters, function(err, resp) {
     //...
 });
 ```
-
 # License
 
 &copy; Jamie Chapman, 57Digital Ltd — [ISC](https://tldrlegal.com/license/-isc-license)
